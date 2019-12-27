@@ -1,0 +1,7 @@
+﻿  Source.cpp
+C:\Users\JuanPablo\Documents\Visual Studio 2019\Projects\Concurrency\Concurrency\Source.cpp(6,9): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'std::thread::id'
+C:\Users\JuanPablo\Documents\Visual Studio 2019\Projects\Concurrency\Concurrency\Source.cpp(14,10): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'std::thread::id'
+C:\Users\JuanPablo\Documents\Visual Studio 2019\Projects\Concurrency\Concurrency\Source.cpp(27,11): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'std::thread::id'
+C:\Users\JuanPablo\Documents\Visual Studio 2019\Projects\Concurrency\Concurrency\Source.cpp(34,9): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'std::thread::id'
+C:\Users\JuanPablo\Documents\Visual Studio 2019\Projects\Concurrency\Concurrency\Source.cpp(39,1): warning C4326:  return type of 'main' should be 'int' instead of 'void'
+  Concurrency.vcxproj -> C:\Users\JuanPablo\Documents\Visual Studio 2019\Projects\Concurrency\Debug\Concurrency.exe
