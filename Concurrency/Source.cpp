@@ -29,13 +29,14 @@ void run()
 
 	thread1.join();
 	thread2.join();
+
+	if (thread3.joinable())
+		std::cout << "Thread 3 is joinable" << std::endl;
+
 	thread3.join();
 
+	if (!thread3.joinable())
+		std::cout << "Thread 3 is not joinable" << std::endl;
+
 	printf("Hello from main- %d \n", std::this_thread::get_id());
-}
-
-
-void main()
-{
-	run();
 }
