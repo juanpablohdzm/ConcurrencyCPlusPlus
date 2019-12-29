@@ -8,6 +8,21 @@
 #include <functional>
 
 
+struct Timer
+{
+	std::chrono::time_point<std::chrono::high_resolution_clock> TimePoint;
+	Timer()
+	{
+		TimePoint = std::chrono::high_resolution_clock().now();
+	}
+
+	~Timer()
+	{
+		float duration = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock().now() - TimePoint).count();
+		std::cout << "Duration :" << duration << std::endl;
+	}
+};
+
 void sequential_accumulate_test()
 {
 	std::vector<int> v{ 1,2,3,4,5,6,7,8,9,10 };
@@ -37,6 +52,8 @@ void accumulate(iterator start, iterator end, T& ref)
 template<typename iterator, typename T>
 T parrallel_accumulate(iterator start, iterator end, T& ref)
 {
+	Timer timer;
+
 	int input_size = std::distance(start, end);
 	int allowed_threads_by_elements = (input_size) / MIN_BLOCK_SIZE;
 
@@ -69,7 +86,7 @@ T parrallel_accumulate(iterator start, iterator end, T& ref)
 
 void main()
 {
-	//sequential_accumulate_test();
+	sequential_accumulate_test();
 
 	const int size = 8000;
 	int*  my_array = new int[size];
